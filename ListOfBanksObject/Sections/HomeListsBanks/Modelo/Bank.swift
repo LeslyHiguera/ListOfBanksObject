@@ -12,4 +12,11 @@ struct Bank: Decodable {
     let url: String?
     let age: Int?
     let description: String?
+    
+    init(bankName: String?, url: String?, age: Int?, description: String?) {
+        self.bankName = bankName
+        self.url = url
+        self.age = age
+        self.description = description
+    }
 }

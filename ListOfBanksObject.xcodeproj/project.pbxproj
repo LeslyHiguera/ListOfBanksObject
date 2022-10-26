@@ -22,8 +22,6 @@
 		61E0F5582909AE5C004DABC0 /* BanksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5572909AE5C004DABC0 /* BanksViewModel.swift */; };
 		61E0F55B2909B43F004DABC0 /* BanksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F55A2909B43F004DABC0 /* BanksRepository.swift */; };
 		61E0F55E2909B831004DABC0 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F55D2909B831004DABC0 /* Bank.swift */; };
-		61E0F5652909E792004DABC0 /* BanksCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5632909E792004DABC0 /* BanksCD+CoreDataClass.swift */; };
-		61E0F5662909E792004DABC0 /* BanksCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5642909E792004DABC0 /* BanksCD+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +61,6 @@
 		61E0F5572909AE5C004DABC0 /* BanksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewModel.swift; sourceTree = "<group>"; };
 		61E0F55A2909B43F004DABC0 /* BanksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepository.swift; sourceTree = "<group>"; };
 		61E0F55D2909B831004DABC0 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
-		61E0F5632909E792004DABC0 /* BanksCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BanksCD+CoreDataClass.swift"; sourceTree = "<group>"; };
-		61E0F5642909E792004DABC0 /* BanksCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BanksCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +91,6 @@
 		61E0F50E29099807004DABC0 = {
 			isa = PBXGroup;
 			children = (
-				61E0F5632909E792004DABC0 /* BanksCD+CoreDataClass.swift */,
-				61E0F5642909E792004DABC0 /* BanksCD+CoreDataProperties.swift */,
 				61E0F51929099807004DABC0 /* ListOfBanksObject */,
 				61E0F53329099808004DABC0 /* ListOfBanksObjectTests */,
 				61E0F53D29099808004DABC0 /* ListOfBanksObjectUITests */,
@@ -344,8 +338,6 @@
 				61E0F51F29099807004DABC0 /* ViewController.swift in Sources */,
 				61E0F54F29099BC2004DABC0 /* CustomTableViewCell.swift in Sources */,
 				61E0F52529099807004DABC0 /* ListOfBanksObject.xcdatamodeld in Sources */,
-				61E0F5652909E792004DABC0 /* BanksCD+CoreDataClass.swift in Sources */,
-				61E0F5662909E792004DABC0 /* BanksCD+CoreDataProperties.swift in Sources */,
 				61E0F51B29099807004DABC0 /* AppDelegate.swift in Sources */,
 				61E0F55B2909B43F004DABC0 /* BanksRepository.swift in Sources */,
 				61E0F51D29099807004DABC0 /* SceneDelegate.swift in Sources */,
