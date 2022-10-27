@@ -16,7 +16,11 @@ class BanksViewModel {
     
     //MARK: - Private Properties
     
-    private var repository = BanksRepository()
+    private var repository: BanksRepositoryProtocol
+    
+    init(repository: BanksRepositoryProtocol) {
+        self.repository = repository
+    }
     
     func getBanks() {
         repository.getBanks { result in

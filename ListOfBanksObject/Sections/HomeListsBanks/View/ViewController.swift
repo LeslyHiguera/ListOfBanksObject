@@ -16,14 +16,14 @@ class ViewController: UIViewController {
     
     //MARK: - Private Properties
     
-    private var viewModel = BanksViewModel()
+    private var viewModel = BanksViewModel(repository: BanksRepository())
     
     // MARK: - Life cycle View
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(.init(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
+        tableView.delegate = self
         tableView.dataSource = self
         viewModel.getBanks()
         viewModel.success = {
@@ -45,8 +45,16 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomTableViewCell else {
             return UITableViewCell()
         }
-        cell.nameLabel.text = viewModel.banks[indexPath.row].bankName
+        cell.bank = viewModel.banks[indexPath.row]
         return cell
+    }
+    
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
     }
     
 }

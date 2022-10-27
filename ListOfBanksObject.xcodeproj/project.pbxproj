@@ -14,7 +14,6 @@
 		61E0F52529099807004DABC0 /* ListOfBanksObject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F52329099807004DABC0 /* ListOfBanksObject.xcdatamodeld */; };
 		61E0F52729099808004DABC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E0F52629099808004DABC0 /* Assets.xcassets */; };
 		61E0F52A29099808004DABC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E0F52829099808004DABC0 /* LaunchScreen.storyboard */; };
-		61E0F53529099808004DABC0 /* ListOfBanksObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F53429099808004DABC0 /* ListOfBanksObjectTests.swift */; };
 		61E0F53F29099808004DABC0 /* ListOfBanksObjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F53E29099808004DABC0 /* ListOfBanksObjectUITests.swift */; };
 		61E0F54129099808004DABC0 /* ListOfBanksObjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F54029099808004DABC0 /* ListOfBanksObjectUITestsLaunchTests.swift */; };
 		61E0F54F29099BC2004DABC0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F54D29099BC2004DABC0 /* CustomTableViewCell.swift */; };
@@ -22,6 +21,14 @@
 		61E0F5582909AE5C004DABC0 /* BanksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5572909AE5C004DABC0 /* BanksViewModel.swift */; };
 		61E0F55B2909B43F004DABC0 /* BanksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F55A2909B43F004DABC0 /* BanksRepository.swift */; };
 		61E0F55E2909B831004DABC0 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F55D2909B831004DABC0 /* Bank.swift */; };
+		61E0F56A2909FB47004DABC0 /* BanksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5692909FB47004DABC0 /* BanksViewModelTests.swift */; };
+		61E0F5702909FFA8004DABC0 /* ResponseExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F56F2909FFA8004DABC0 /* ResponseExpectation.swift */; };
+		61E0F5722909FFCE004DABC0 /* BankFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F5712909FFCE004DABC0 /* BankFake.swift */; };
+		61E0F574290A00BA004DABC0 /* BanksRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F573290A00BA004DABC0 /* BanksRepositoryMock.swift */; };
+		61E0F579290A0143004DABC0 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F578290A0143004DABC0 /* UIImageViewExtensions.swift */; };
+		61E0F57C290A015B004DABC0 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F57B290A015B004DABC0 /* ImageService.swift */; };
+		61E0F57E290A016D004DABC0 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F57D290A016D004DABC0 /* Thread.swift */; };
+		61E0F580290A01B2004DABC0 /* NetworkingValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0F57F290A01B2004DABC0 /* NetworkingValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +59,6 @@
 		61E0F52929099808004DABC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61E0F52B29099808004DABC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E0F53029099808004DABC0 /* ListOfBanksObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOfBanksObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		61E0F53429099808004DABC0 /* ListOfBanksObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBanksObjectTests.swift; sourceTree = "<group>"; };
 		61E0F53A29099808004DABC0 /* ListOfBanksObjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOfBanksObjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E0F53E29099808004DABC0 /* ListOfBanksObjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBanksObjectUITests.swift; sourceTree = "<group>"; };
 		61E0F54029099808004DABC0 /* ListOfBanksObjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfBanksObjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -61,6 +67,14 @@
 		61E0F5572909AE5C004DABC0 /* BanksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewModel.swift; sourceTree = "<group>"; };
 		61E0F55A2909B43F004DABC0 /* BanksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepository.swift; sourceTree = "<group>"; };
 		61E0F55D2909B831004DABC0 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		61E0F5692909FB47004DABC0 /* BanksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksViewModelTests.swift; sourceTree = "<group>"; };
+		61E0F56F2909FFA8004DABC0 /* ResponseExpectation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseExpectation.swift; sourceTree = "<group>"; };
+		61E0F5712909FFCE004DABC0 /* BankFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankFake.swift; sourceTree = "<group>"; };
+		61E0F573290A00BA004DABC0 /* BanksRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanksRepositoryMock.swift; sourceTree = "<group>"; };
+		61E0F578290A0143004DABC0 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		61E0F57B290A015B004DABC0 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		61E0F57D290A016D004DABC0 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		61E0F57F290A01B2004DABC0 /* NetworkingValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,7 @@
 		61E0F51929099807004DABC0 /* ListOfBanksObject */ = {
 			isa = PBXGroup;
 			children = (
+				61E0F575290A012D004DABC0 /* Utils */,
 				61E0F5532909ABBB004DABC0 /* Sections */,
 				61E0F51A29099807004DABC0 /* AppDelegate.swift */,
 				61E0F51C29099807004DABC0 /* SceneDelegate.swift */,
@@ -125,7 +140,10 @@
 		61E0F53329099808004DABC0 /* ListOfBanksObjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				61E0F53429099808004DABC0 /* ListOfBanksObjectTests.swift */,
+				61E0F56D2909FF90004DABC0 /* Utils */,
+				61E0F5692909FB47004DABC0 /* BanksViewModelTests.swift */,
+				61E0F5712909FFCE004DABC0 /* BankFake.swift */,
+				61E0F573290A00BA004DABC0 /* BanksRepositoryMock.swift */,
 			);
 			path = ListOfBanksObjectTests;
 			sourceTree = "<group>";
@@ -199,6 +217,57 @@
 				61E0F55D2909B831004DABC0 /* Bank.swift */,
 			);
 			path = Modelo;
+			sourceTree = "<group>";
+		};
+		61E0F56D2909FF90004DABC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F56E2909FF9A004DABC0 /* Enums */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61E0F56E2909FF9A004DABC0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F56F2909FFA8004DABC0 /* ResponseExpectation.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		61E0F575290A012D004DABC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F57A290A0154004DABC0 /* Utils */,
+				61E0F576290A0133004DABC0 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61E0F576290A0133004DABC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F577290A0138004DABC0 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		61E0F577290A0138004DABC0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F578290A0143004DABC0 /* UIImageViewExtensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		61E0F57A290A0154004DABC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61E0F57B290A015B004DABC0 /* ImageService.swift */,
+				61E0F57D290A016D004DABC0 /* Thread.swift */,
+				61E0F57F290A01B2004DABC0 /* NetworkingValidator.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,11 +404,15 @@
 			files = (
 				61E0F5582909AE5C004DABC0 /* BanksViewModel.swift in Sources */,
 				61E0F55E2909B831004DABC0 /* Bank.swift in Sources */,
+				61E0F57E290A016D004DABC0 /* Thread.swift in Sources */,
 				61E0F51F29099807004DABC0 /* ViewController.swift in Sources */,
+				61E0F57C290A015B004DABC0 /* ImageService.swift in Sources */,
 				61E0F54F29099BC2004DABC0 /* CustomTableViewCell.swift in Sources */,
+				61E0F579290A0143004DABC0 /* UIImageViewExtensions.swift in Sources */,
 				61E0F52529099807004DABC0 /* ListOfBanksObject.xcdatamodeld in Sources */,
 				61E0F51B29099807004DABC0 /* AppDelegate.swift in Sources */,
 				61E0F55B2909B43F004DABC0 /* BanksRepository.swift in Sources */,
+				61E0F580290A01B2004DABC0 /* NetworkingValidator.swift in Sources */,
 				61E0F51D29099807004DABC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +421,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61E0F53529099808004DABC0 /* ListOfBanksObjectTests.swift in Sources */,
+				61E0F5702909FFA8004DABC0 /* ResponseExpectation.swift in Sources */,
+				61E0F574290A00BA004DABC0 /* BanksRepositoryMock.swift in Sources */,
+				61E0F56A2909FB47004DABC0 /* BanksViewModelTests.swift in Sources */,
+				61E0F5722909FFCE004DABC0 /* BankFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

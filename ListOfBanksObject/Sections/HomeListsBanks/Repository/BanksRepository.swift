@@ -9,15 +9,17 @@ import Foundation
 import UIKit
 import CoreData
 
-class BanksRepository {
+protocol BanksRepositoryProtocol {
+    func getBanks(completionHandler: @escaping (Result<[Bank], Error>) -> Void)
+}
+
+class BanksRepository: BanksRepositoryProtocol {
     
     func getBanks(completionHandler: @escaping (Result<[Bank], Error>) -> Void) {
-        DispatchQueue.main.async {
-            let localBanks = self.getBanks()
-            if localBanks.count > 0 {
-                completionHandler(.success(localBanks))
-                return
-            }
+        let localBanks = self.getBanks()
+        if localBanks.count > 0 {
+            completionHandler(.success(localBanks))
+            return
         }
         let url = URL(string: "https://dev.obtenmas.com/catom/api/challenge/banks")!
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
@@ -37,6 +39,7 @@ class BanksRepository {
             if let data = data,
                let banks = try? JSONDecoder().decode([Bank].self, from: data) {
                 DispatchQueue.main.async {
+                    self.deleteAllBanks()
                     self.saveBanks(banks)
                     completionHandler(.success(banks))
                 }
@@ -60,7 +63,7 @@ class BanksRepository {
         }
     }
     
-    func getBanks() -> [Bank] {
+    private func getBanks() -> [Bank] {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []
         }
@@ -73,7 +76,7 @@ class BanksRepository {
                 let back = Bank(bankName: $0.bankName,
                                 url: $0.url,
                                 age: Int($0.age),
-                                description: $0.description)
+                                description: $0.descript)
                 banks.append(back)
             }
         } catch {
@@ -81,5 +84,24 @@ class BanksRepository {
         }
         return banks
     }
+    
+    private func deleteAllBanks() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        do {
+            let fetchRequest: NSFetchRequest<BanksCD> = BanksCD.fetchRequest()
+            let CoreDataCourses = try appDelegate.persistentContainer.viewContext.fetch(fetchRequest)
+            
+            CoreDataCourses.forEach {
+                appDelegate.persistentContainer.viewContext.delete($0)
+            }
+            
+            try appDelegate.persistentContainer.viewContext.save()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
+    
     
 }
