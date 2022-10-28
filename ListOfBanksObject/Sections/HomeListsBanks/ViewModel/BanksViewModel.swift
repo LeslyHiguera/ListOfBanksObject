@@ -12,6 +12,7 @@ class BanksViewModel {
     //MARK: - Internal Properties
     var error: (String) -> Void = { _ in }
     var success: () -> Void = { }
+    var loading: (Bool) -> Void = { _ in }
     var banks: [Bank] = []
     
     //MARK: - Private Properties
@@ -23,16 +24,16 @@ class BanksViewModel {
     }
     
     func getBanks() {
-        repository.getBanks { result in
+        loading(true)
+        repository.getBanks { [weak self] result in
+            self?.loading(false)
             switch result {
-                
             case .success(let banks):
-                self.banks = banks
-                self.success()
+                self?.banks = banks
+                self?.success()
             case .failure(let error):
-                self.error(error.localizedDescription)
+                self?.error(error.localizedDescription)
             }
-            
         }
     }
     

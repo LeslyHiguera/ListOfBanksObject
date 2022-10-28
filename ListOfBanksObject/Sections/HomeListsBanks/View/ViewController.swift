@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView! {
+        didSet {
+            activityIndicator.hidesWhenStopped = true
+        }
+    }
     
     //MARK: - Private Properties
     
@@ -26,12 +31,25 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         viewModel.getBanks()
-        viewModel.success = {
-            self.tableView.reloadData()
+        viewModel.loading = { [weak self] isLoading in
+            if isLoading {
+                self?.activityIndicator.startAnimating()
+            } else {
+                self?.activityIndicator.stopAnimating()
+            }
         }
-        viewModel.error = { error in
-            print(error)
+        viewModel.success = { [weak self] in
+            self?.tableView.reloadData()
         }
+        viewModel.error = { [weak self] error in
+            self?.showError(error)
+        }
+    }
+    
+    private func showError(_ error: String) {
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alertController.addAction(.init(title: "Ok", style: .default))
+        present(alertController, animated: true)
     }
 }
 

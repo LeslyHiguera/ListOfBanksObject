@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEm-dy-DMW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,6 +21,13 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fBc-zz-sCM">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="PEf-uh-Kh6"/>
+                                    <constraint firstAttribute="height" constant="40" id="rTs-zb-vlL"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -28,10 +36,13 @@
                             <constraint firstItem="e9q-5t-F2m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BF9-Zj-Tnf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e9q-5t-F2m" secondAttribute="trailing" id="Bz1-fU-PUF"/>
                             <constraint firstItem="e9q-5t-F2m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hfm-Ta-aCW"/>
+                            <constraint firstItem="fBc-zz-sCM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QgR-iV-H25"/>
+                            <constraint firstItem="fBc-zz-sCM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yhZ-D8-pFK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Banks" id="qlb-c7-d2K"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="fBc-zz-sCM" id="Wss-KS-YmP"/>
                         <outlet property="tableView" destination="e9q-5t-F2m" id="wZS-WI-fgD"/>
                     </connections>
                 </viewController>
